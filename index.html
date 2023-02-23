@@ -83,6 +83,8 @@
  </div>
 
     <script>
+
+      // login button event handler
       const loginBtn = document.getElementById("login");
       loginBtn.addEventListener("click", function () {
         const container = document.getElementById("container");
@@ -91,10 +93,9 @@
         transaction.style.display = 'block'
       });
 
-      
-
-      const deposit = document.getElementById("deposit");
-      deposit.addEventListener("click", function(){
+      // deposit button event handler
+       const deposit = document.getElementById("deposit");
+       deposit.addEventListener("click", function(){
        const inputDeposit = document.getElementById("inputDeposit").value;
        const depositNumber = parseFloat(inputDeposit);
        const totalDeposit = document.getElementById("totalDeposit").innerText;
@@ -106,12 +107,11 @@
        const totalResultBalance1 = totalBalanceNumber1 + depositNumber;
        document.getElementById("totalBalance").innerText = totalResultBalance1;
        document.getElementById("inputDeposit").value = "";
-
-  
       })
 
-      const withdraw = document.getElementById("withdraw");
-      withdraw.addEventListener("click", function(){
+      // withdraw button event handler
+        const withdraw = document.getElementById("withdraw");
+        withdraw.addEventListener("click", function(){
         const inputWithdraw = document.getElementById("inputWithdraw").value;
         const withdrawNumber = parseFloat(inputWithdraw);
         const totalWithdraw = document.getElementById("totalWithdraw").innerText;

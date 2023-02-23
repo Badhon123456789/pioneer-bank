@@ -99,7 +99,7 @@
         withdraw.addEventListener("click", function () {
             const withdrawNumber = getInputNumber("inputWithdraw")
             updateSpanText("totalWithdraw", withdrawNumber)
-            updateSpanText("totalBalance", -withdrawNumber)
+            updateSpanText("totalBalance", -1 * withdrawNumber)
 
             document.getElementById("inputWithdraw").value = "";
 
@@ -112,10 +112,10 @@
             return number
         }
 
-        function updateSpanText(id, depositNumber) {
+        function updateSpanText(id, addedNumber) {
             const total = document.getElementById(id).innerText;
             const totalNumber = parseFloat(total);
-            const totalResult = totalNumber + depositNumber;
+            const totalResult = totalNumber + addedNumber;
             document.getElementById(id).innerText = totalResult;
         }
 
